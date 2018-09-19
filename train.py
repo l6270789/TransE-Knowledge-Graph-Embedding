@@ -65,7 +65,7 @@ if __name__ == '__main__':
     FLAGS.relation_size = relation_size
 
     # Model Preparation
-    mode = tf.estimator.ModeKeys.TRAIN
+    model = tf.estimator.ModeKeys.TRAIN
     iterator = get_iterator(
         FLAGS.data_file, entity, entity_table, relation_table, FLAGS.batch_size, shuffle_buffer_size=FLAGS.shuffle_buffer_size)
     if FLAGS.model_name.lower() == "transe":
